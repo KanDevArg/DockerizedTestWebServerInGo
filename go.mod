@@ -1,3 +1,3 @@
-module github.com/kandevarg/testwebserver
+module github.com/kandevarg/DockerizedTestWebServerInGo
 
 go 1.13
