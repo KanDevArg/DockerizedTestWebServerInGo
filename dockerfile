@@ -5,13 +5,13 @@
 #builder stage
 FROM golang:1.13-alpine as builder  
 WORKDIR /go/src/app
-COPY main.go /go/src/app
-RUN go build -o webserver .
+COPY . /go/src/app
+RUN go build -o DockerizedTestWebServerInGo .
 
 FROM alpine
 WORKDIR /app
 COPY --from=builder /go/src/app /app/
-CMD [ "./webserver" ]
+CMD [ "./DockerizedTestWebServerInGo" ]
 
 
 #367mb image
