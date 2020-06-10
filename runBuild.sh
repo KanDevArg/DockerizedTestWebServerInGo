@@ -5,6 +5,6 @@ echo "Building main.go ..."
 
 mkdir -p bin
 
-go build -o $PRE_PWD/bin/app main.go
+go build -o $PRE_PWD/bin/app .
 
 echo "Done."
